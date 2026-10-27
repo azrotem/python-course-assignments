@@ -21,5 +21,5 @@ I used AI as a guide to help me navigate the technical setup. A few prompts I us
 GitHub Pages | Jekyll | Markdown | HTML | CSS | AI
 
 ### Links
-repo: https://github.com/azrotem/azrotem.github.io.git 
-site: https://azrotem.github.io
+- repo: https://github.com/azrotem/azrotem.github.io.git 
+- site: https://azrotem.github.io
