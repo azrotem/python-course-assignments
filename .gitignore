@@ -1,0 +1,17 @@
+# Visual Studio Code workspace settings
+.vscode/
+
+# Python cache files (generated automatically when running scripts)
+__pycache__/
+*.pyc
+
+# Environment variables (keeps passwords and API keys safe if you use them later)
+.env
+
+# Virtual environments
+venv/
+.venv/
+
+# Operating system hidden files
+.DS_Store
+Thumbs.db
