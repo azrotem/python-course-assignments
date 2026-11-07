@@ -57,9 +57,11 @@ def calculate_construct(
     return {
         "Full Sequence": full_sequence,
         "Extinction Coefficient": extinction_coefficient,
-        "MW (Da)": molecular_weight_da,
-        "Concentration (µM)": molar_concentration * 1_000_000,
-        "Concentration (mg/mL)": molar_concentration * molecular_weight_da,
+        "MW (Da)": round(molecular_weight_da, 2),
+        "Concentration (µM)": round(molar_concentration * 1_000_000, 2),
+        "Concentration (mg/mL)": round(
+            molar_concentration * molecular_weight_da, 2
+        ),
     }
 
 
