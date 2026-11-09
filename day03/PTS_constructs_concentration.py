@@ -35,7 +35,7 @@ def calculate_construct(
 
     try:
         molecular_weight_da = molecular_weight(
-            full_sequence, seq_type="protein", monoisotopic=True
+            full_sequence, seq_type="protein", monoisotopic=False
         )
     except (ValueError, KeyError) as error:
         raise ValueError(f"invalid protein sequence: {error}") from error
@@ -43,7 +43,7 @@ def calculate_construct(
     extinction_coefficient = (
         full_sequence.count("W") * 5500
         + full_sequence.count("Y") * 1490
-        + full_sequence.count("C") * 125
+        + (full_sequence.count("C") // 2) * 125
     )
     if extinction_coefficient <= 0:
         raise ValueError(
