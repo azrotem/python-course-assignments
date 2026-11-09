@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PTS Construct Concentration Calculator</title>
+</head>
+<body>
+    <h1>PTS Construct Concentration Calculator</h1>
+    <p>Upload a CSV with construct and scaffold tables separated by a blank row.</p>
+    {% if error %}
+    <p role="alert">{{ error }}</p>
+    {% endif %}
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <label for="file">CSV file</label>
+        <input id="file" name="file" type="file" accept=".csv,text/csv" required>
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
